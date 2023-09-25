@@ -1,1 +1,1 @@
-# gradle-javafx-vscode
+# Blank project Setup for gradle-javafx-vscode (v11)

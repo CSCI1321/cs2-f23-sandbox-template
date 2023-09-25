@@ -18,7 +18,7 @@ repositories {
 }
 
 javafx {
-    version = "19"
+    version = "11"
     modules = [ 'javafx.controls' ]
 }
 
@@ -33,7 +33,7 @@ dependencies {
 application {
     // Define the main class for the application.
     if(!project.hasProperty('main')) {
-        mainClass = 'cs2.graphics.AppFX'
+        mainClass = 'cs2.hello.App'
     } else {
         mainClass = project.findProperty('main').toString()
     }
