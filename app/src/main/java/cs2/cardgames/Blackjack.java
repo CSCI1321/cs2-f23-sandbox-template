@@ -3,7 +3,8 @@ package cs2.cardgames;
 import java.util.Scanner;
 
 public class Blackjack {
-  private static class Hand {
+  
+  public static class Hand {
     //Field
     private Deck hand;
     //Constructor
@@ -49,20 +50,21 @@ public class Blackjack {
   }
 
   public static void main(String[] args) {
-    /* Hand Tester Code
-    Hand h = new Hand();
+    /*//  Hand Tester Code
+    Blackjack.Hand h = new Blackjack.Hand();
     h.add(new Card(Card.DIAMOND, 1));
     h.add(new Card(Card.CLUB, 5));
     h.add(new Card(Card.CLUB, 13));
     System.out.println(h.getTotal());
     */
+
     Scanner input = new Scanner(System.in);
 
     Deck deck = Deck.standardDeck();
     deck.shuffle();
 
-    Hand player = new Hand();
-    Hand dealer = new Hand();
+    Blackjack.Hand player = new Blackjack.Hand();
+    Blackjack.Hand dealer = new Blackjack.Hand();
     
     player.add(deck.deal());
     dealer.add(deck.deal());
@@ -88,6 +90,7 @@ public class Blackjack {
           player.add(deck.deal());
           System.out.println("Player has: " + player.toString() + " (" + player.getTotal() + ")");
           if(player.getTotal() >= 21) {
+            System.out.println("Player BUSTED!");
             keepGoing = false;
           }
         } else {
